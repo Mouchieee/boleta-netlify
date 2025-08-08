@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boleta - Simil Oficial</title>
+  <style>
+    :root{
+      --page-width: 210mm;
+      --page-height: 297mm;
+      --margin: 18mm;
+      --header-height: 70px;
+      --accent: #0a0a0a;
+      --muted: rgba(0,0,0,0.65);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    html,body{height:100%;}
+    body{
+      display:flex;justify-content:center;padding:20px;background:#f2f2f4;
+    }
+    .page{
+      width: calc(var(--page-width));
+      min-height: calc(var(--page-height));
+      background:white;
+      box-shadow:0 8px 30px rgba(0,0,0,0.12);
+      position:relative;
+      padding:24px 28px;
+      box-sizing:border-box;
+      overflow:hidden;
+    }
+    header{
+      display:flex;align-items:center;justify-content:space-between;
+      margin-bottom:14px;
+    }
+    .brand{
+      display:flex;flex-direction:column;gap:4px;
+    }
+    .brand h1{margin:0;font-size:28px;letter-spacing:0.3px}
+    .brand h2{margin:0;font-size:12px;color:var(--muted);font-weight:600}
+    .logo-right{
+      width:150px;height:150px;object-fit:contain;
+      border-radius:6px;border:1px solid rgba(0,0,0,0.06);background:#fff;padding:6px;
+    }
+    .watermark{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+      opacity:0.06;pointer-events:none;max-width:75%;max-height:75%;
+    }
+    .meta{display:flex;gap:18px;margin-bottom:10px}
+    .meta .col{font-size:12px;color:var(--muted)}
+    .grades{
+      border-collapse:collapse;width:100%;font-size:11px;margin-top:6px;
+    }
+    .grades thead td{background:#f5f7fb;padding:6px 8px;border:1px solid #e1e6ee;font-weight:700}
+    .grades td{padding:6px 8px;border:1px solid #e9eef5}
+    .section-title{background:#e9f0ff;color:#073a7a;font-weight:700;padding:6px 8px}
+    footer{position:absolute;bottom:18px;left:28px;right:28px;font-size:11px;color:var(--muted)}
+    @media print{
+      body{background:white}
+      .page{box-shadow:none;margin:0}
+      .watermark{opacity:0.03}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <h1>República <span style="color:#0a58ca">Argentina</span></h1>
+        <h2>LEY DE EDUCACIÓN NACIONAL N° 26.206 — PROVINCIA DE MENDOZA</h2>
+        <div style="font-size:12px;color:var(--muted)">DIRECCIÓN GENERAL DE ESCUELAS — DIRECCIÓN DE EDUCACIÓN TÉCNICA Y TRABAJO</div>
+      </div>
+      <img src="document.png" alt="PNG visible" class="logo-right" />
+    </header>
+    <img src="document.png" alt="watermark" class="watermark" />
+    <div class="meta">
+      <div class="col">Establecimiento: <strong>ESCUELA N° A-006 "PASCUAL IACCARINI"</strong></div>
+      <div class="col">Alumno: <strong>MANSELLA, CELESTE AILEN</strong> — DNI: <strong>45.714.681</strong></div>
+      <div class="col">Fecha de emisión: <strong>01/01/2025</strong></div>
+    </div>
+    <table class="grades">
+      <thead>
+        <tr>
+          <td style="width:40%">ESPACIO CURRICULAR</td>
+          <td style="width:18%">CALIFICACIÓN</td>
+          <td style="width:14%">CONDICIÓN</td>
+          <td style="width:12%">MES</td>
+          <td style="width:8%">AÑO</td>
+          <td style="width:8%">ESTABLECIMIENTO</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="section-title" colspan="6">PRIMERO</td></tr>
+        <tr>
+          <td>Lengua</td>
+          <td>8.50</td>
+          <td>REGULAR</td>
+          <td>DIC</td>
+          <td>2017</td>
+          <td>Este establecimiento</td>
+        </tr>
+        <tr>
+          <td>Lengua Extranjera</td>
+          <td>8.83</td>
+          <td>REGULAR</td>
+          <td>DIC</td>
+          <td>2017</td>
+          <td>Este establecimiento</td>
+        </tr>
+        <tr><td class="section-title" colspan="6">SEGUNDO</td></tr>
+        <tr>
+          <td>Matemática</td>
+          <td>7.00</td>
+          <td>REGULAR</td>
+          <td>DIC</td>
+          <td>2018</td>
+          <td>Este establecimiento</td>
+        </tr>
+        <tr>
+          <td>Educación Física</td>
+          <td>10.00</td>
+          <td>REGULAR</td>
+          <td>DIC</td>
+          <td>2018</td>
+          <td>Este establecimiento</td>
+        </tr>
+        <tr><td class="section-title" colspan="6">TERCERO</td></tr>
+        <tr>
+          <td>Geografía</td>
+          <td>7.75</td>
+          <td>REGULAR</td>
+          <td>DIC</td>
+          <td>2019</td>
+          <td>Este establecimiento</td>
+        </tr>
+        <tr>
+          <td>Historia</td>
+          <td>7.00</td>
+          <td>REGULAR</td>
+          <td>DIC</td>
+          <td>2019</td>
+          <td>Este establecimiento</td>
+        </tr>
+      </tbody>
+    </table>
+    <footer>
+      <div>Documento generado a modo de ejemplo — ajuste los textos, filas y la referencia del archivo PNG (document.png) antes de exportar a PDF o imprimir.</div>
+    </footer>
+  </div>
+</body>
+</html>
